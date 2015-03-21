@@ -1,9 +1,7 @@
-var ReactTools = require('react-tools');
+var babel = require('babel');
+
 module.exports = {
   process: function(src) {
-    return ReactTools.transform(src, {
-      harmony: true,
-      stripTypes: true
-    });
+    return babel.transform(src).code;
   }
 };
